@@ -13,6 +13,8 @@
 		985B0BA62864FD9500314421 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985B0BA42864FD9500314421 /* Main.storyboard */; };
 		985B0BA82864FD9500314421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985B0BA72864FD9500314421 /* Assets.xcassets */; };
 		985B0BAB2864FD9500314421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985B0BA92864FD9500314421 /* LaunchScreen.storyboard */; };
+		985B0BB32864FF0B00314421 /* DogImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BB22864FF0B00314421 /* DogImageViewController.swift */; };
+		985B0BB52867385E00314421 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BB42867385E00314421 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		985B0BA72864FD9500314421 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		985B0BAA2864FD9500314421 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		985B0BAC2864FD9500314421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		985B0BB22864FF0B00314421 /* DogImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageViewController.swift; sourceTree = "<group>"; };
+		985B0BB42867385E00314421 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				985B0BA02864FD9500314421 /* SceneDelegate.swift */,
 				985B0BA22864FD9500314421 /* ViewController.swift */,
 				985B0BA42864FD9500314421 /* Main.storyboard */,
+				985B0BB22864FF0B00314421 /* DogImageViewController.swift */,
+				985B0BB42867385E00314421 /* Model.swift */,
 				985B0BA72864FD9500314421 /* Assets.xcassets */,
 				985B0BA92864FD9500314421 /* LaunchScreen.storyboard */,
 				985B0BAC2864FD9500314421 /* Info.plist */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				985B0BB52867385E00314421 /* Model.swift in Sources */,
 				985B0BA32864FD9500314421 /* ViewController.swift in Sources */,
 				985B0B9F2864FD9500314421 /* AppDelegate.swift in Sources */,
 				985B0BA12864FD9500314421 /* SceneDelegate.swift in Sources */,
+				985B0BB32864FF0B00314421 /* DogImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +303,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +332,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

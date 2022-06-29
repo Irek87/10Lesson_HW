@@ -8,12 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let imageURL = "https://random.dog/woof.json"
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dogImageVC = segue.destination as! DogImageViewController
+        dogImageVC.imageURLString = imageURL
     }
 
-
+    @IBAction func GetImageButtonTapped(_ sender: Any) {
+    }
+    
 }
 
