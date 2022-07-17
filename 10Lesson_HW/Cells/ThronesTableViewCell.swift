@@ -19,12 +19,14 @@ class ThronesTableViewCell: UITableViewCell {
         titleLabel.text = "Title: \(person.title ?? "")"
         familyLabel.text = "Family: \(person.family ?? "")"
         
-        guard let stringURL = person.imageUrl else { return }
-        guard let imageUrl = URL(string: stringURL) else { return }
-        guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-        
-        DispatchQueue.main.async {
-            self.imageLabel.image = UIImage(data: imageData)
+        DispatchQueue.global().async {
+            guard let stringURL = person.imageUrl else { return }
+            guard let imageUrl = URL(string: stringURL) else { return }
+            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
+            
+            DispatchQueue.main.async {
+                self.imageLabel.image = UIImage(data: imageData)
+            }
         }
     }
 

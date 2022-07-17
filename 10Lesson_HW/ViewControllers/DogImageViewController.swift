@@ -13,7 +13,7 @@ class DogImageViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    var imageURLString = ""
+//    var imageURLString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class DogImageViewController: UIViewController {
  
 extension DogImageViewController {
     private func fetchImage() {
-        guard let url = URL(string: imageURLString) else { return }
+        guard let url = URL(string: URLAdresses.dogJSONURL.rawValue) else { return }
 
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else { return }
@@ -35,6 +35,7 @@ extension DogImageViewController {
                 guard let imageData = try? Data(contentsOf: imageURL) else { return }
                 DispatchQueue.main.async {
                     self.imageView.image = UIImage(data: imageData)
+                    self.activityIndicator.stopAnimating()
                 }
             } catch let error {
                 print(error)
