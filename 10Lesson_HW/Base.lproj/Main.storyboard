@@ -27,7 +27,21 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="GetImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5T-DI-WTY"/>
-                                    <segue destination="8zm-fd-FV4" kind="show" identifier="showImage" id="mfW-UH-lP9"/>
+                                    <segue destination="8zm-fd-FV4" kind="show" identifier="showDogImage" id="mfW-UH-lP9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFZ-xk-iDh">
+                                <rect key="frame" x="16" y="526" width="382" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ZQO-96-dL8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Tap to see EPL">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ToSeeEPLButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uc1-Dd-Phx"/>
+                                    <segue destination="pWK-el-v5J" kind="show" identifier="showEPL" id="a0E-1s-nAE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -35,7 +49,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FGR-4u-mSI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FCs-6S-0lB"/>
+                            <constraint firstItem="HFZ-xk-iDh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HyD-YP-maD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HFZ-xk-iDh" secondAttribute="trailing" constant="16" id="PCm-TD-6Sn"/>
                             <constraint firstItem="FGR-4u-mSI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Reh-tf-k5J"/>
+                            <constraint firstItem="HFZ-xk-iDh" firstAttribute="top" secondItem="FGR-4u-mSI" secondAttribute="bottom" constant="16" id="iKs-zP-9a8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FGR-4u-mSI" secondAttribute="trailing" constant="20" id="vmG-T2-EHl"/>
                         </constraints>
                     </view>
@@ -44,6 +61,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="638" y="72"/>
+        </scene>
+        <!--Football View Controller-->
+        <scene sceneID="21Z-mo-XDP">
+            <objects>
+                <tableViewController id="pWK-el-v5J" customClass="FootballViewController" customModule="_0Lesson_HW" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xzS-Zf-vqc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="rW0-g5-Ric" customClass="TeamCell" customModule="_0Lesson_HW" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rW0-g5-Ric" id="5u2-UC-FjK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="I1A-E1-Qc7">
+                                            <rect key="frame" x="20" y="11" width="374" height="178"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZH-eP-8cY" userLabel="AbbrLabel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="44.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zg-FS-ZR3" userLabel="RukovodLabel">
+                                                    <rect key="frame" x="0.0" y="44.5" width="374" height="44.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skP-p3-4j6" userLabel="EmailLabel">
+                                                    <rect key="frame" x="0.0" y="89" width="374" height="44.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ne-cN-jKx" userLabel="WWWLabel">
+                                                    <rect key="frame" x="0.0" y="133.5" width="374" height="44.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="I1A-E1-Qc7" firstAttribute="top" secondItem="5u2-UC-FjK" secondAttribute="topMargin" id="c01-hY-CE5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="I1A-E1-Qc7" secondAttribute="trailing" id="fH6-NS-i22"/>
+                                        <constraint firstItem="I1A-E1-Qc7" firstAttribute="leading" secondItem="5u2-UC-FjK" secondAttribute="leadingMargin" id="yKE-21-AJW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="I1A-E1-Qc7" secondAttribute="bottom" id="zXl-iz-Tzo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="abbrLabel" destination="cZH-eP-8cY" id="eNS-ml-iwZ"/>
+                                    <outlet property="emailLabel" destination="skP-p3-4j6" id="59d-1j-ESF"/>
+                                    <outlet property="rukovodLabel" destination="1Zg-FS-ZR3" id="M0d-gK-DhP"/>
+                                    <outlet property="wwwLabel" destination="9ne-cN-jKx" id="UU5-TN-6rN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pWK-el-v5J" id="JFn-fu-NdU"/>
+                            <outlet property="delegate" destination="pWK-el-v5J" id="iJa-h2-qYJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="HBn-Kx-DjN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpr-C4-EyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686.9565217391305" y="578.57142857142856"/>
         </scene>
         <!--Dog Image View Controller-->
         <scene sceneID="BVx-ZI-tSc">
@@ -83,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azY-G6-sPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540.5797101449277" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1614" y="-148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h1U-bP-mie">

@@ -15,6 +15,9 @@
 		985B0BAB2864FD9500314421 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985B0BA92864FD9500314421 /* LaunchScreen.storyboard */; };
 		985B0BB32864FF0B00314421 /* DogImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BB22864FF0B00314421 /* DogImageViewController.swift */; };
 		985B0BB52867385E00314421 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BB42867385E00314421 /* Model.swift */; };
+		985B0BDC2877602B00314421 /* FootballModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BDB2877602B00314421 /* FootballModel.swift */; };
+		985B0BDE2877646500314421 /* FootballViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BDD2877646500314421 /* FootballViewController.swift */; };
+		985B0BE32879E97200314421 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BE22879E97200314421 /* TeamCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		985B0BAC2864FD9500314421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		985B0BB22864FF0B00314421 /* DogImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageViewController.swift; sourceTree = "<group>"; };
 		985B0BB42867385E00314421 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		985B0BDB2877602B00314421 /* FootballModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballModel.swift; sourceTree = "<group>"; };
+		985B0BDD2877646500314421 /* FootballViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballViewController.swift; sourceTree = "<group>"; };
+		985B0BE22879E97200314421 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +68,34 @@
 			children = (
 				985B0B9E2864FD9500314421 /* AppDelegate.swift */,
 				985B0BA02864FD9500314421 /* SceneDelegate.swift */,
-				985B0BA22864FD9500314421 /* ViewController.swift */,
+				985B0BDA28775FEF00314421 /* Models */,
+				985B0BDF287766A300314421 /* ViewControllers */,
 				985B0BA42864FD9500314421 /* Main.storyboard */,
-				985B0BB22864FF0B00314421 /* DogImageViewController.swift */,
-				985B0BB42867385E00314421 /* Model.swift */,
+				985B0BE22879E97200314421 /* TeamCell.swift */,
 				985B0BA72864FD9500314421 /* Assets.xcassets */,
 				985B0BA92864FD9500314421 /* LaunchScreen.storyboard */,
 				985B0BAC2864FD9500314421 /* Info.plist */,
 			);
 			path = 10Lesson_HW;
+			sourceTree = "<group>";
+		};
+		985B0BDA28775FEF00314421 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				985B0BB42867385E00314421 /* Model.swift */,
+				985B0BDB2877602B00314421 /* FootballModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		985B0BDF287766A300314421 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				985B0BA22864FD9500314421 /* ViewController.swift */,
+				985B0BB22864FF0B00314421 /* DogImageViewController.swift */,
+				985B0BDD2877646500314421 /* FootballViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,10 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				985B0BE32879E97200314421 /* TeamCell.swift in Sources */,
 				985B0BB52867385E00314421 /* Model.swift in Sources */,
 				985B0BA32864FD9500314421 /* ViewController.swift in Sources */,
+				985B0BDC2877602B00314421 /* FootballModel.swift in Sources */,
 				985B0B9F2864FD9500314421 /* AppDelegate.swift in Sources */,
 				985B0BA12864FD9500314421 /* SceneDelegate.swift in Sources */,
+				985B0BDE2877646500314421 /* FootballViewController.swift in Sources */,
 				985B0BB32864FF0B00314421 /* DogImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
