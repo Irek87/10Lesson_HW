@@ -18,6 +18,9 @@
 		985B0BDC2877602B00314421 /* FootballModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BDB2877602B00314421 /* FootballModel.swift */; };
 		985B0BDE2877646500314421 /* FootballViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BDD2877646500314421 /* FootballViewController.swift */; };
 		985B0BE32879E97200314421 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0BE22879E97200314421 /* TeamCell.swift */; };
+		985B0C09288445A700314421 /* ThronesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0C08288445A700314421 /* ThronesTableViewController.swift */; };
+		985B0C0B288445C900314421 /* ThronesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0C0A288445C900314421 /* ThronesTableViewCell.swift */; };
+		985B0C0D2884469900314421 /* ThronesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B0C0C2884469900314421 /* ThronesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		985B0BDB2877602B00314421 /* FootballModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballModel.swift; sourceTree = "<group>"; };
 		985B0BDD2877646500314421 /* FootballViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballViewController.swift; sourceTree = "<group>"; };
 		985B0BE22879E97200314421 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		985B0C08288445A700314421 /* ThronesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThronesTableViewController.swift; sourceTree = "<group>"; };
+		985B0C0A288445C900314421 /* ThronesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThronesTableViewCell.swift; sourceTree = "<group>"; };
+		985B0C0C2884469900314421 /* ThronesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThronesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,7 @@
 				985B0BDA28775FEF00314421 /* Models */,
 				985B0BDF287766A300314421 /* ViewControllers */,
 				985B0BA42864FD9500314421 /* Main.storyboard */,
-				985B0BE22879E97200314421 /* TeamCell.swift */,
+				985B0C0E288446B400314421 /* Cells */,
 				985B0BA72864FD9500314421 /* Assets.xcassets */,
 				985B0BA92864FD9500314421 /* LaunchScreen.storyboard */,
 				985B0BAC2864FD9500314421 /* Info.plist */,
@@ -84,6 +90,7 @@
 			children = (
 				985B0BB42867385E00314421 /* Model.swift */,
 				985B0BDB2877602B00314421 /* FootballModel.swift */,
+				985B0C0C2884469900314421 /* ThronesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,8 +101,18 @@
 				985B0BA22864FD9500314421 /* ViewController.swift */,
 				985B0BB22864FF0B00314421 /* DogImageViewController.swift */,
 				985B0BDD2877646500314421 /* FootballViewController.swift */,
+				985B0C08288445A700314421 /* ThronesTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		985B0C0E288446B400314421 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				985B0BE22879E97200314421 /* TeamCell.swift */,
+				985B0C0A288445C900314421 /* ThronesTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,10 +189,13 @@
 				985B0BE32879E97200314421 /* TeamCell.swift in Sources */,
 				985B0BB52867385E00314421 /* Model.swift in Sources */,
 				985B0BA32864FD9500314421 /* ViewController.swift in Sources */,
+				985B0C0B288445C900314421 /* ThronesTableViewCell.swift in Sources */,
+				985B0C09288445A700314421 /* ThronesTableViewController.swift in Sources */,
 				985B0BDC2877602B00314421 /* FootballModel.swift in Sources */,
 				985B0B9F2864FD9500314421 /* AppDelegate.swift in Sources */,
 				985B0BA12864FD9500314421 /* SceneDelegate.swift in Sources */,
 				985B0BDE2877646500314421 /* FootballViewController.swift in Sources */,
+				985B0C0D2884469900314421 /* ThronesModel.swift in Sources */,
 				985B0BB32864FF0B00314421 /* DogImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

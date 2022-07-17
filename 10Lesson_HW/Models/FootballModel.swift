@@ -7,46 +7,46 @@
 
 import UIKit
 
-struct Irek: Codable {
-    let abbr: String?
-    let rukovod: String?
-    let email: String?
-    let www: String?
+//struct Irek: Codable {
+//    let abbr: String?
+//    let rukovod: String?
+//    let email: String?
+//    let www: String?
+//}
+
+struct FootballModel: Codable {
+    let status: Bool?
+    let ddata: Ddata?
+
+    enum CodingKeys: String, CodingKey {
+        case status
+        case ddata = "data"
+    }
 }
 
-//struct FootballModel: Decodable {
-//    let status: Bool?
-//    let ddata: Ddata?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case status
-//        case ddata = "data"
-//    }
-//}
-//
-//struct Ddata: Decodable {
-//    let name: String?
-//    let seasonDisplay: String?
-//    let standings: [Standing]?
-//}
-//
-//struct Standing: Decodable {
-//    let team: Team?
-//    let note: Note?
-//}
-//
-//struct Team: Decodable {
-//    let name: String?
-//    let logos: [Logo]?
-//}
-//
-//struct Logo: Decodable {
-//    let href: String?
-//}
-//
-//struct Note: Decodable {
-//    let color: String?
-//    let rank: Int?
-//}
+struct Ddata: Codable {
+    let name: String?
+    let seasonDisplay: String?
+    let standings: [Standing]?
+}
+
+struct Standing: Codable {
+    let team: Team?
+    let note: Note?
+}
+
+struct Team: Codable {
+    let name: String?
+    let logos: [Logo]?
+}
+
+struct Logo: Codable {
+    let href: String?
+}
+
+struct Note: Codable {
+    let color: String?
+    let rank: Int?
+}
 
 

@@ -9,12 +9,13 @@ import UIKit
 
 class FootballViewController: UITableViewController {
     
-//    var footballs: [FootballModel] = []
-//    var standings: [Standing] = []
-    var irekDatas: [Irek] = []
+    var footballs: [FootballModel] = []
+    var standings: [Standing] = []
+//    var irekDatas: [Irek] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchEPL()
 //        tableView.rowHeight = 100
 }
     
@@ -22,7 +23,8 @@ class FootballViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        irekDatas.count
+//        guard let standingsNum = footballs[0].ddata?.standings?.count else { return 0 }
+        footballs.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,23 +38,43 @@ class FootballViewController: UITableViewController {
 //            cell.configure(with: stand)
 //        }
 
-//        let standing = standings[indexPath.row]
-//        cell.configure(with: standing)
+        if let standing = footballs.first?.ddata?.standings?[indexPath.row] {
+            cell.configure(with: standing)
+        }
         
-        let irekData = irekDatas[indexPath.row]
-        cell.configure(with: irekData)
+//        let irekData = irekDatas[indexPath.row]
+//        cell.configure(with: irekData)
         
         return cell
     }
 
     // MARK: - Networking
-//    func fetchEPL() {
+    func fetchEPL() {
+        guard let url = URL(string: URLAdresses.footballURL.rawValue) else { return }
+
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            guard let data = data else { return }
+            do {
+                self.footballs = try JSONDecoder().decode([FootballModel].self, from: data)
+                if let standings = self.footballs.first?.ddata?.standings {
+                    self.standings = standings
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } catch let error {
+                print("There is an error: \(error)")
+            }
+        }.resume()
+    }
+    
+//    func fetchIrek() {
 //        guard let url = URL(string: URLAdresses.footballURL.rawValue) else { return }
 //
 //        URLSession.shared.dataTask(with: url) { data, _, _ in
 //            guard let data = data else { return }
 //            do {
-//                self.standings = try JSONDecoder().decode([Standing].self, from: data)
+//                self.irekDatas = try JSONDecoder().decode([Irek].self, from: data)
 //                DispatchQueue.main.async {
 //                    self.tableView.reloadData()
 //                }
@@ -61,19 +83,4 @@ class FootballViewController: UITableViewController {
 //            }
 //        }.resume()
 //    }
-    func fetchIrek() {
-        guard let url = URL(string: URLAdresses.footballURL.rawValue) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, _ in
-            guard let data = data else { return }
-            do {
-                self.irekDatas = try JSONDecoder().decode([Irek].self, from: data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } catch let error {
-                print(error)
-            }
-        }.resume()
-    }
 }

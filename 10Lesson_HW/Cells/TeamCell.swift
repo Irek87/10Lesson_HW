@@ -18,11 +18,11 @@ class TeamCell: UITableViewCell {
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var wwwLabel: UILabel!
     
-    func configure(with irekData: Irek) {
-        abbrLabel.text = irekData.abbr
-        rukovodLabel.text = irekData.rukovod
-        emailLabel.text = irekData.email
-        wwwLabel.text = irekData.www
+    func configure(with standing: Standing) {
+        abbrLabel.text = standing.team?.name
+        rukovodLabel.text = standing.team?.name
+        emailLabel.text = standing.note?.color
+        wwwLabel.text = standing.note?.color
         
 //        textLabel?.text = "\(standing.status ?? nil)"
 //        rankLabel.text = "Rank: \(standing.note?.rank ?? 0)"
